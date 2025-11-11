@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller= "co.edu.uniquindio.poo.proyecto_final_p2.controller.RegistroController">
+    <children>
+        <VBox alignment="CENTER" spacing="12"
+              AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+            <children>
+                <Label text="Registro de Cuenta"
+                       style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+
+                <!-- Selección de tipo -->
+                <HBox spacing="5" alignment="CENTER">
+                    <Label text="Tipo de cuenta:"/>
+                    <ComboBox fx:id="cbTipoCuenta" prefWidth="150"/>
+                </HBox>
+
+                <Separator/>
+
+                <!-- Campos comunes -->
+                <VBox spacing="5">
+                    <Label text="ID:"/>
+                    <TextField fx:id="txtId"/>
+
+                    <Label text="Nombre completo:"/>
+                    <TextField fx:id="txtNombre"/>
+
+                    <Label text="Correo electrónico:"/>
+                    <TextField fx:id="txtCorreo"/>
+
+                    <Label text="Número de teléfono:"/>
+                    <TextField fx:id="txtTelefono"/>
+                </VBox>
+
+                <Separator/>
+
+                <!-- Campos específicos de Repartidor -->
+                <VBox fx:id="vboxRepartidor" spacing="5">
+                    <Label text="Estado de disponibilidad:"/>
+                    <ChoiceBox fx:id="cbDisponibilidad"/>
+
+                    <Label text="Zona de cobertura:"/>
+                    <ChoiceBox fx:id="cbZona"/>
+                </VBox>
+
+                <Button fx:id="btnRegistrar" text="Registrar"/>
+                <Label fx:id="lblMensaje" textFill="red"/>
+            </children>
+
+            <padding>
+                <Insets top="20" left="20" right="20" bottom="20"/>
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>
+
+
